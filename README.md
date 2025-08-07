@@ -18,13 +18,14 @@ The project is built using **FastAPI** for the web framework and a **Logistic Re
 
 ## Project Structure
 
+```bash
 iris_api/
 ├── .venv/ # Virtual environment directory
 ├── main.py # The main FastAPI application code
 ├── iris_logistic_regression_model.joblib # The pre-trained model file
 ├── requirements.txt # Project dependencies
 └── README.md # This file
-
+```
 ---
 
 ## Setup and Installation
@@ -49,19 +50,21 @@ python -m venv venv
 .\venv\Scripts\activate
 # On macOS/Linux:
 source venv/bin/activate
-
+```
 3. Install Dependencies
 
 Install all the required Python libraries from the requirements.txt file.
 
+```bash
 pip install -r requirements.txt
-
+```
 How to Run the API
 With the virtual environment active and dependencies installed, start the API server using Uvicorn.
 
+```bash
 uvicorn main:app --reload
-
-The server will start and be accessible at http://127.0.0.1:8000. The --reload flag enables hot-reloading for development.
+```
+The server will start and be accessible at http://127.0.0.1:8000.
 
 How to Use the API
 Once the server is running, you can interact with the API in two ways:
@@ -70,14 +73,16 @@ Once the server is running, you can interact with the API in two ways:
 
 Open your web browser and navigate to:
 
+```bash
 http://127.0.0.1:8000/docs
-
+```
 This will open the Swagger UI, where you can see all the available endpoints, test them with sample data, and see the responses directly in your browser.
 
 2. Using curl (Command Line)
 
 You can also send a POST request to the /predict endpoint using a command-line tool like curl.
 
+```bash
 curl -X 'POST' \
   '[http://127.0.0.1:8000/predict](http://127.0.0.1:8000/predict)' \
   -H 'accept: application/json' \
@@ -88,7 +93,8 @@ curl -X 'POST' \
   "petal_length": 5.1,
   "petal_width": 1.8
 }'
-
+```
+```bash
 Expected Response:
 
 {
